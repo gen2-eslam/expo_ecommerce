@@ -1,50 +1,75 @@
-# Welcome to your Expo app 👋
+# Full Stack Expo E-Commerce App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, full-stack E-Commerce application built with React Native and Expo. This app features a beautiful, animated UI using Reanimated and Lottie, seamless navigation with Expo Router, and a feature-rich authentication flow.
 
-## Get started
+## 🌟 Features
 
-1. Install dependencies
+- **Authentication Flow**: Beautifully designed signup and signin screens with custom animated inputs.
+- **Social Login**: Options to log in with Email, Google, Apple, or continue as a Guest.
+- **Smooth Animations**: High-quality micro-interactions and transitions using `react-native-reanimated` and `lottie-react-native`.
+- **Custom Components**: Reusable UI components including `CustomInput` and `PasswordInput` with built-in toggle visibility.
+- **Modern Navigation**: File-based routing powered by Expo Router with stack and bottom tab navigators.
+- **Cross-Platform**: Runs seamlessly on both iOS and Android.
 
-   ```bash
-   npm install
-   ```
+## 🛠 Tech Stack
 
-2. Start the app
+- **Framework**: [React Native](https://reactnative.dev/) & [Expo](https://expo.dev/)
+- **Navigation**: [Expo Router](https://docs.expo.dev/router/introduction/) & React Navigation
+- **Animations**: `react-native-reanimated`, `lottie-react-native`
+- **Icons**: `@expo/vector-icons` (Ionicons, MaterialCommunityIcons, FontAwesome6)
+- **Styling**: React Native StyleSheet & Expo Linear Gradient
 
-   ```bash
-   npx expo start
-   ```
+## 📸 Screenshots & Demo
 
-In the output, you'll find options to open the app in a
+### Video Demo
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Watch the app in action:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+<video width="320" height="600" controls>
+  <source src="./screen_shots/2026-03-02%2007-35-17.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-## Get a fresh project
+Alternatively, you can click here to view the [Video Demo](./screen_shots/2026-03-02%2007-35-17.mp4).
 
-When you're ready, run:
+### Screenshots
+
+<p align="center">
+  <img src="./screen_shots/Screenshot%20from%202026-03-02%2007-37-49.png" width="45%" style="border-radius:20px; border: 1px solid #ccc; margin-right: 2%;" alt="Screenshot 1" />
+  <img src="./screen_shots/Screenshot%20from%202026-03-02%2007-38-26.png" width="45%" style="border-radius:20px; border: 1px solid #ccc;" alt="Screenshot 2" />
+</p>
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or newer recommended)
+- Expo CLI
+
+### 1. Install dependencies
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Start the development server
 
-## Learn more
+```bash
+npm run start
+# or npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+In the output, you'll find options to open the app in a:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- [Development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go)
 
-## Join the community
+## 📁 Project Structure
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **`app/`**: File-based routing components (Screens like Index, Signup, Signin, Tabs).
+- **`components/`**: Reusable UI elements (Custom Inputs, Buttons).
+- **`constants/`**: Theme colors, fonts, and constant values.
+- **`assets/`**: Static images, fonts, and Lottie animations.
+- **`screen_shots/`**: Promotional project screenshots and demos.
