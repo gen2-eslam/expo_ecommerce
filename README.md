@@ -27,7 +27,6 @@ Watch the app in action:
 
 <video width="320" height="600" controls>
   <source src="./screen_shots/2026-03-02%2007-35-17.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
 
 Alternatively, you can click here to view the [Video Demo](./screen_shots/2026-03-02%2007-35-17.mp4).

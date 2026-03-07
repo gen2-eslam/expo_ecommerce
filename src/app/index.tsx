@@ -11,8 +11,8 @@ import Animated, {
   FadeInRight,
   FadeInUp,
 } from "react-native-reanimated";
-import { COLORS } from "../constants/colors";
-import { IMAGES } from "../constants/images";
+import { COLORS } from "../utils/constants/colors";
+import { IMAGES } from "../utils/constants/images";
 type Props = {};
 
 const WelcomeScreen = (props: Props) => {
@@ -45,7 +45,7 @@ const WelcomeScreen = (props: Props) => {
               />
               <Animated.Text entering={FadeInDown.delay(300).springify(300)}>
                 Already have an account?{" "}
-                <Link href="/signin">
+                <Link href="auth/signin">
                   <Text style={styles.loginTextspan}>Sign In</Text>
                 </Link>
               </Animated.Text>
@@ -90,7 +90,7 @@ const LoginButton = ({
       style={styles.socialLoginWrapper}
       entering={FadeInUp.delay(300).springify(300)}
     >
-      <Link href={isGuest ? "/(tabs)" : "/signup"} asChild>
+      <Link href={isGuest ? "/(tabs)" : "/auth/signup"} asChild>
         <TouchableOpacity style={styles.button}>
           <Ionicons name={icon} size={20} color={COLORS.black} />
           <Text style={styles.btnText}>{title}</Text>
@@ -105,7 +105,7 @@ export default WelcomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    
+
     justifyContent: "center",
     alignItems: "center",
   },
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.gray,
     borderRadius: 25,
     borderWidth: StyleSheet.hairlineWidth,
-    
+
     alignItems: "center",
     justifyContent: "center",
     gap: 5,

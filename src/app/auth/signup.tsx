@@ -1,22 +1,18 @@
-import { Ionicons } from "@expo/vector-icons";
-import { router, Stack } from "expo-router";
+import { router } from "expo-router";
 
-import LottieView from "lottie-react-native";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Animated, { FadeIn } from "react-native-reanimated";
-import { CustomInput, PasswordInput } from "../components/custom_input";
-import { COLORS } from "../constants/colors";
+import AnimatedLogo from "../../components/animated_logo";
+import { AppBar } from "../../components/app_bar";
+import { CustomInput, PasswordInput } from "../../components/custom_input";
+import { COLORS } from "../../utils/constants/colors";
+
 const SignUpScreen = () => {
   return (
     <>
-      <AppBar />
+      <AppBar title="Sign Up" />
       <View style={styles.container}>
-        <LottieView
-          source={require("../assets/lottie/logo.json")}
-          autoPlay={true}
-          loop={false}
-          style={{ width: 300, height: 300 }}
-        />
+        <AnimatedLogo />
 
         <Animated.View
           entering={FadeIn.duration(1000).delay(2000).springify()}
@@ -24,7 +20,7 @@ const SignUpScreen = () => {
         >
           <Text style={styles.title}>Create an Account</Text>
           <CustomInput
-            textInputPros={{
+            textInputProps={{
               placeholder: "Full Name",
               keyboardType: "default",
               onChangeText: (text: string) => console.log(text),
@@ -32,7 +28,7 @@ const SignUpScreen = () => {
             icon="account-circle-outline"
           />
           <CustomInput
-            textInputPros={{
+            textInputProps={{
               placeholder: "Email",
               keyboardType: "email-address",
               onChangeText: (text: string) => console.log(text),
@@ -56,26 +52,6 @@ const SignUpScreen = () => {
         </Animated.View>
       </View>
     </>
-  );
-};
-
-const AppBar = () => {
-  return (
-    <Stack.Screen
-      options={{
-        headerShown: true,
-        title: "Sign Up",
-        headerTitleAlign: "center",
-        contentStyle: { backgroundColor: "white" },
-        headerLeft: () => {
-          return (
-            <TouchableOpacity onPress={() => router.back()}>
-              <Ionicons name="chevron-back" size={24} color="black" />
-            </TouchableOpacity>
-          );
-        },
-      }}
-    />
   );
 };
 

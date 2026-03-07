@@ -2,12 +2,12 @@ import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import React, { ComponentProps, useState } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
-import { COLORS } from "../constants/colors";
+import { COLORS } from "../utils/constants/colors";
 
 export const CustomInput = (props: {
   icon: ComponentProps<typeof MaterialCommunityIcons>["name"];
   color?: string;
-  textInputPros: React.ComponentProps<typeof TextInput>;
+  textInputProps: React.ComponentProps<typeof TextInput>;
 }) => {
   return (
     <View style={styles.input}>
@@ -16,12 +16,7 @@ export const CustomInput = (props: {
         size={24}
         color={props.color || COLORS.primary}
       />
-      <TextInput
-        placeholder={props.textInputPros.placeholder}
-        keyboardType={props.textInputPros.keyboardType}
-        style={{ width: "80%" }}
-        onChangeText={props.textInputPros.onChangeText}
-      />
+      <TextInput style={{ width: "80%" }} {...props.textInputProps} />
     </View>
   );
 };
@@ -41,7 +36,6 @@ export const PasswordInput = (props: {
       <TextInput
         placeholder={props.placeholder}
         style={{ width: "80%" }}
-        keyboardType="visible-password"
         secureTextEntry={showPassword}
         onChangeText={props.onChangeText}
       />
