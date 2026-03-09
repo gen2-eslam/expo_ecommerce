@@ -22,8 +22,9 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack initialRouteName="index">
+    <Stack initialRouteName="flat_list">
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="flat_list" options={{ presentation: "pageSheet" }} />
       <Stack.Screen
         name="auth/signin"
         options={{ presentation: "pageSheet" }}

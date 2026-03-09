@@ -34,7 +34,7 @@ Alternatively, you can click here to view the [Video Demo](./screen_shots/2026-0
 ### Screenshots
 
 <p align="center">
-  <img src="./screen_shots/Screenshot%20from%202026-03-02%2007-37-49.png" width="45%" style="border-radius:20px; border: 1px solid #ccc; margin-right: 2%;" alt="Screenshot 1" />
+  <img src="./screen_shots/q.png" width="45%" style="border-radius:20px; border: 1px solid #ccc; margin-right: 2%;" alt="Screenshot 1" />
   <img src="./screen_shots/Screenshot%20from%202026-03-02%2007-38-26.png" width="45%" style="border-radius:20px; border: 1px solid #ccc;" alt="Screenshot 2" />
 </p>
 
