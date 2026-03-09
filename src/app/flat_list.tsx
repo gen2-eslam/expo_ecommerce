@@ -1,6 +1,13 @@
 import axios from "axios";
 import React from "react";
-import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 // run npm run server to start the server انا الي كاتب كده مش ال AI
 const ApiUrl = "http://10.0.2.2:3000/saleProducts";
@@ -33,6 +40,8 @@ const FlatListScreen = () => {
 };
 
 const ItemCard = ({ item }: { item: Item }) => {
+  const [numberOfLines, setNumberOfLines] = React.useState(2);
+
   return (
     <View style={styles.itemCard}>
       <Image
@@ -41,9 +50,21 @@ const ItemCard = ({ item }: { item: Item }) => {
       />
       <View style={{ flexDirection: "column", width: "70%", marginLeft: 10 }}>
         <Text style={{ fontSize: 16, fontWeight: "bold" }}>{item.title}</Text>
-        <Text style={{ color: "gray" }} numberOfLines={2}>
-          {item.description}
-        </Text>
+
+        <TouchableOpacity
+          onPress={() => {
+            if (numberOfLines === 2) {
+              setNumberOfLines(1000);
+            } else {
+              setNumberOfLines(2);
+            }
+          }}
+        >
+          <Text style={{ color: "gray" }} numberOfLines={numberOfLines}>
+            {item.description}
+          </Text>
+        </TouchableOpacity>
+
         <View
           style={{
             flexDirection: "row",
